@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gke-bq-testing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gke-bq-testing
+  template:
+    metadata:
+      labels:
+        app: gke-bq-testing
+    spec:
+      containers:
+      - name: gke-bq-testing
+        image: gcr.io/zproject201807/gke-bq-testing:latest
+        ports:
+        - containerPort: 8080
+        env:
+          - name: PORT
+            value: "8080"
