@@ -1,5 +1,9 @@
 # GKE to BigQuery Testing
 
+### Setup.sh
+
+The ```setup.sh``` script will execute all of the commands needed to spin up a GKE cluster and deploy the resources and services. Alternatvely, the individual commands are listed below.
+
 ### Create GKE Cluster
 
 ```bash
