@@ -13,3 +13,10 @@ sed -i 's/gcp_project_id/'"$gcp_project_id"'/' deployment.yaml
 kubectl apply -f deployment.yaml
 
 kubectl apply -f service.yaml
+
+echo ""
+echo ""
+echo ""
+kubectl get services
+
+#ZEND
