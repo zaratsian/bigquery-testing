@@ -45,4 +45,7 @@ kubectl get services
 ```
 
 ### Access App
-NOTE: Can be called using curl or by going directly to the service URL
+
+The ```kubectl get services``` commands will output an external IP address. Use this IP address to run your test query.
+
+For example, if the IP is 35.34.231.211, then you can hit this url to get your results: http://35.34.231.211/query
