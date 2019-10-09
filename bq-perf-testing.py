@@ -1,9 +1,18 @@
 
+'''
+Install / requirements.txt
+
+sudo pip3 install google-cloud-bigquery-storage
+sudo pip3 install google-cloud-bigquery
+'''
+
 import sys
 import datetime
 import logging
 from google.cloud import bigquery
 from google.oauth2 import service_account
+from google.cloud import bigquery_storage_v1beta1
+
 
 queries = [
     'SELECT * FROM `bigquery-public-data.chicago_crime.crime`'
