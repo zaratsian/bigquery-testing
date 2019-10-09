@@ -24,17 +24,14 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
     
     try:
-        bqclient = bigquery.Client()
+        credentials = service_account.Credentials.from_service_account_file(
+            'my-sa-key.json',
+            scopes=["https://www.googleapis.com/auth/cloud-platform"],
+        )
+        bqclient = bigquery.Client(credentials=credentials, project=credentials.project_id)
     except Exception as e:
         logging.error('Failed to establish python BQ client')
         sys.exit()
-    
-    credentials = service_account.Credentials.from_service_account_file(
-        'my-sa-key.json',
-        scopes=["https://www.googleapis.com/auth/cloud-platform"],
-    )
-    
-    bqclient = bigquery.Client(credentials=credentials, project=credentials.project_id)
     
     for query in queries:
         
