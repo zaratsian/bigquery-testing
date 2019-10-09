@@ -4,6 +4,7 @@ Install / requirements.txt
 
 sudo pip3 install google-cloud-bigquery-storage
 sudo pip3 install google-cloud-bigquery
+sudo pip3 install google-auth
 '''
 
 import sys
