@@ -2,6 +2,7 @@
 # REFERENCES:
 # https://www.simba.com/drivers/bigquery-odbc-jdbc/
 # https://github.com/mkleehammer/pyodbc
+# https://www.cdata.com/kb/tech/bigquery-odbc-python-linux.rst
 
 sudo yum install epel-release
 sudo yum install python-pip gcc-c++ python-devel unixODBC-devel
