@@ -8,6 +8,11 @@ sudo yum install epel-release
 sudo yum install python-pip gcc-c++ python-devel unixODBC-devel
 sudo pip install pyodbc
 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export ODBCINI=/etc/odbc.ini
+export ODBCINSTINI=/etc/odbcinst.ini
+export SIMBAGOOGLEBIGQUERYODBCINI=/opt/simba/googlebigqueryodbc/lib/64/simba.googlebigqueryodbc.ini
+
 echo ""
 echo ""
 echo ""
